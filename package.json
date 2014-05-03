@@ -1,0 +1,25 @@
+{
+  "name": "soundcloud-tracks",
+  "description": "get the tracks from a soundcloud page",
+  "keywords": ["soundcloud"],
+  "version": "0.0.1",
+  "bin": {
+    "sc-tracks": "./bin/sc-tracks"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jb55/soundcloud-tracks.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --harmony --reporter spec"
+  },
+  "dependencies": {
+    "JSONStream": "^0.7.3",
+    "soundcloudy": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "expect.js": "*"
+  }
+}

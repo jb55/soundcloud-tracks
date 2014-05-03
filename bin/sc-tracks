@@ -1,0 +1,20 @@
+#!/usr/bin/env node --harmony
+
+var JSONStream = require('JSONStream');
+
+var clientId = process.env.SC_CLIENT_ID || process.env.SOUNDCLOUDY_CLIENT_ID;
+var user = process.argv[2]
+
+if (!clientId) fail("SC_CLIENT_ID must be set");
+if (!user) fail("usage: sc-tracks <user>");
+
+var tracks = require('../')(clientId)
+
+tracks(user)
+.pipe(JSONStream.stringify(false))
+.pipe(process.stdout);
+
+function fail(msg){
+  console.error(msg);
+  process.exit(1);
+}
