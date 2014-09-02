@@ -7,7 +7,7 @@ module.exports = function(clientId) {
     opts = opts || {};
     return request()
       .resource("users/%s/tracks", user)
-      .pageSize(opts.pageSize || 1000)
+      .pageSize(opts.pageSize || 190)
       .concurrency(opts.concurrency || 1)
       .allStream()
   }
