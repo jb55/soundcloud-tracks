@@ -2,7 +2,7 @@
   "name": "soundcloud-tracks",
   "description": "get the tracks from a soundcloud page",
   "keywords": ["soundcloud"],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "bin": {
     "sc-tracks": "./bin/sc-tracks"
   },
