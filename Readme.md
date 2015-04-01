@@ -16,9 +16,9 @@ var through = require('through')
 var tracks = require('soundcloud-tracks')(clientId);
 
 tracks('monstercat')
-.pipe(through(function(track){
-  // track data
-}))
+.on('data', function (track) {
+  console.log(track);
+})
 ```
 
 ## Executable
